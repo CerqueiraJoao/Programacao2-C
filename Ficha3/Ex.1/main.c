@@ -10,9 +10,9 @@
 
 int main(int argc, char** argv) {
     
-    int num = 1;
+    int num;
     
-    for(num == 1; num <= 100; ++num){
+    for(num = 1; num <= 100; ++num){
         printf("%d ", num);
     }
 
