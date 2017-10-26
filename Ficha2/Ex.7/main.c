@@ -34,6 +34,12 @@ int main(int argc, char** argv) {
      printf("Em ordem crescente fica %d, %d, %d. ", num3, num2, num1);   
     }else if (num3 > num2 && num2 > num1){
      printf("Em ordem crescente fica %d, %d, %d. ", num1, num2, num3);
+    }else if (num1 > num3 && num3 > num2){
+     printf("Em ordem crescente fica %d, %d, %d. ", num2, num3, num1);
+    }else if (num3 > num1 && num1 > num2){
+     printf("Em ordem crescente fica %d, %d, %d. ", num2, num1, num3);
+    }else if (num2 > num1 && num1 > num3){
+     printf("Em ordem crescente fica %d, %d, %d. ", num3, num1, num2);
     }else {
      printf("Em ordem crescente fica %d, %d, %d. ", num1, num3, num2);
     } 
