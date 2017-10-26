@@ -21,22 +21,25 @@ int main(int argc, char** argv) {
     if (tipo > 0 ){
         valor = saldo + tipo;
         if(valor > saldo){
-          printf ("Operação realizável!\n");  
+          printf ("Operação realizável!\n"); 
+          printf ("O saldo após o crédito é %.2lf€!", valor);
         }else {
           printf ("Operação impossível de realizar!\n");  
         }
-        printf ("O saldo após o crédito é %.2lf€!", valor);
     }
     
     if (tipo < 0 ){
         valor = saldo + tipo;
-        if(valor > saldo){
-          printf ("Operação realizável!\n");  
-        }else {
+        if(valor < 0){
+          printf ("Operação impossível de realizar!\n");   
+        }else if(valor < saldo){
+          printf ("Operação realizável!\n"); 
+          printf ("O saldo após o débito é %.2lf€!", valor);
+        }else{
           printf ("Operação impossível de realizar!\n");  
         }
-        printf ("O saldo após o débito é %.2lf€!", valor);
     }
+    
     
     if (tipo == 0){
         printf("O saldo assim mantém-se o mesmo! Cerca de %.2lf€", saldo);
