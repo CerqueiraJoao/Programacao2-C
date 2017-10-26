@@ -12,10 +12,10 @@ int main(int argc, char** argv) {
 
     int num, i, par;
     
-    puts("Insira quantos pares pretende");
+    puts("Insira quantos pares que pretende");
     scanf("%d", &num);
     
-    while (par <= num - 1 ){
+    while (par <= num - 1){
 
         if(i % 2 == 0){
                 printf("%d ", i);
