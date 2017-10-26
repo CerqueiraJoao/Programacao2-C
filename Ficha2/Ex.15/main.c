@@ -17,7 +17,17 @@ int main(int argc, char** argv) {
     scanf("%d", &viagem);
     
     media = (float)distancia / (viagem / 60);
-    printf("%.2f", media);
+    
+    if (media <= 60){
+        printf ("Tem que abastecer ao km 79.\n");
+        printf("A viagem será efetuada a uma velocidade média de %.2fkm/h", media);
+    }else if (media > 60 && media <= 120){
+        printf ("Tem que abastecer ao km 70.\n");
+        printf("A viagem será efetuada a uma velocidade média de %.2fkm/h", media);
+    }else{
+        printf ("Tem que abastecer ao km 60.\n");
+        printf("A viagem será efetuada a uma velocidade média de %.2fkm/h", media);
+    }
     return (0);
 }
 
