@@ -18,7 +18,7 @@ int main(int argc, char** argv) {
     for (i = num - 1; i >= num - 5; --i){
         printf("%d ", i);
     }
-    printf("(%d) ", num);
+    
     for (i = num + 1; i <= num + 5; ++i){
         printf("%d ", i);
     }
