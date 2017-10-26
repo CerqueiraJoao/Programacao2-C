@@ -12,23 +12,21 @@ int main(int argc, char** argv) {
     
     int i, num, div; 
 
-
     printf("Insira um numero ");
     scanf("%d", &num);
    
-    //while (x <= 0);
-  
-  for (i = 1; i <= num; i++) {
-    if (num % i == 0) { 
-     div++;
+    for (i = 1; i <= num; i++) {
+        if (num % i == 0){ 
+        div++;
+        }
     }
-  }
     
-  if (div == 2)
-    printf("%d é primo!!", num);
-  else
-    printf("%d não é primo!!", num);
-
+     if (div == 2){
+        printf("%d é primo!!", num);
+    }else{
+        printf("%d não é primo!!", num);
+    }
+    
     return (0);
 }
 
