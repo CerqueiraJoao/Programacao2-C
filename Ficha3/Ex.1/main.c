@@ -13,7 +13,7 @@ int main(int argc, char** argv) {
     int num = 1;
     
     for(num == 1; num <= 100; ++num){
-        printf("%d\n", num);
+        printf("%d ", num);
     }
 
     return (0);
