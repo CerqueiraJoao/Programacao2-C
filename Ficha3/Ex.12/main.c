@@ -15,13 +15,19 @@ int main(int argc, char** argv) {
     do{
         printf("Insira um numero (-1 para efetuar a media): ");
         scanf("%d", &num);
+        if (num == -1){
+            printf("A media dos valores inseridos é %.2lf\n", (float)soma / total);
+        }else{
         soma += num;
         total++;
+        }
     }
     while (num != -1);
     
-    printf("A media dos valores inseridos é %.2lf\n", (float)soma / total);
-
+    
+ 
+    
+   
     return (0);
 }
 
