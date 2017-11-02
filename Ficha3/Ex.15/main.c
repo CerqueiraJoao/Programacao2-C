@@ -36,30 +36,30 @@ int main(int argc, char** argv) {
 
         //Sexo
         limparBufferEntrada();
-        
-        do{
-        puts("Qual o sexo (M ou F)");
-        scanf("%c", &sexo);
-        
-        if (sexo == 'M' || sexo == 'm') {
-            printf("Sexo Masculino!\n");
-        } else if (sexo == 'F' || sexo == 'f') {
-            printf("Sexo Feminino!\n");
-        } else {
-            printf("Sexo inválido!\n");
-        }
-        
-        limparBufferEntrada();
+
+        do {
+            puts("Qual o sexo (M ou F)");
+            scanf("%c", &sexo);
+
+            if (sexo == 'M' || sexo == 'm') {
+                printf("Sexo Masculino!\n");
+            } else if (sexo == 'F' || sexo == 'f') {
+                printf("Sexo Feminino!\n");
+            } else {
+                printf("Sexo inválido!\n");
+            }
+
+            limparBufferEntrada();
         } while (!(sexo == 'M' || sexo == 'm' || sexo == 'F' || sexo == 'f'));
-        
+
 
         //Estado civil
 
-        do{
-        puts("Estado civil (1-Solteiro, 2-Casado, 3-Divorciado, 4-Viuvo");
-        scanf("%d", &est_civil);
-        
-        if (est_civil == 1) {
+        do {
+            puts("Estado civil (1-Solteiro, 2-Casado, 3-Divorciado, 4-Viuvo");
+            scanf("%d", &est_civil);
+
+            if (est_civil == 1) {
                 printf("Solteiro!\n");
             } else if (est_civil == 2) {
                 printf("Casado!\n");
@@ -67,35 +67,35 @@ int main(int argc, char** argv) {
                 printf("Divorciado!\n");
             } else if (est_civil == 4) {
                 printf("Viuvo!\n");
-            }else{
+            } else {
                 printf("Estado civil invalido!\n");
             }
-        limparBufferEntrada();
-        }while (!(est_civil >= 1 && est_civil <= 4));
-    
+            limparBufferEntrada();
+        } while (!(est_civil >= 1 && est_civil <= 4));
+
 
         //Salario
 
-        do{
-        puts("Qual é o seu salário");
-        scanf("%lf", &salario);
-        
-        if (salario > salario_min) {
-            ++conta_salario;
-            salario_final += salario;
-        } else {
-            printf("Salario abaixo do minimo!\n");
-        }
-        }while(!(salario > salario_min));
-        
+        do {
+            puts("Qual é o seu salário");
+            scanf("%lf", &salario);
+
+            if (salario > salario_min) {
+                ++conta_salario;
+                salario_final += salario;
+            } else {
+                printf("Salario abaixo do minimo!\n");
+            }
+        } while (!(salario > salario_min));
+
 
 
         //Maior e menor de idade
         if (idade > maior_idade) {
             maior_idade = idade;
         }
-        
-        if (idade < menor_idade){
+
+        if (idade < menor_idade) {
             menor_idade = idade;
         }
 
@@ -122,5 +122,6 @@ int main(int argc, char** argv) {
     printf("Media de salarios %.2lf€\n", media_salario);
     printf("São %d as mulheres com ordenado até 1500€ \n", fem_salario_men1500);
     printf("São %d os homens casados entre os 18 e 35 anos.", masc_1835_casado);
+
     return (0);
 }
