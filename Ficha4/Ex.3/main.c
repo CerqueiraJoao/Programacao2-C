@@ -7,8 +7,8 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#define EPD 1,16042
-#define DPE 0,86166
+#define EPD 1.16042
+#define DPE 0.86166
 
 void limparBufferEntrada(){ 
     char ch; 
@@ -52,4 +52,3 @@ int main(int argc, char** argv) {
     
     return (0);
 }
-
