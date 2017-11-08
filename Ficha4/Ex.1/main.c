@@ -8,20 +8,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 #define asterisco '*'
+
 int lerInteiro() {
     int ast;
     
     scanf("%d", &ast);
     return ast;
 }
+
 void asteriscos(int num) {
     int i = 1;
     for (i = 1; i <= num; ++i) {
         printf("%c ", asterisco);
     }
 }
-
-
 
 int main(int argc, char** argv) {
 
