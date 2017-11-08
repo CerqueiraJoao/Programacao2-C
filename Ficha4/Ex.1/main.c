@@ -8,23 +8,29 @@
 #include <stdio.h>
 #include <stdlib.h>
 #define asterisco '*'
-
-void asteriscos(int num){
+int lerInteiro() {
+    int ast;
+    
+    scanf("%d", &ast);
+    return ast;
+}
+void asteriscos(int num) {
     int i = 1;
-    for(i = 1; i <= num; ++i){
+    for (i = 1; i <= num; ++i) {
         printf("%c ", asterisco);
     }
 }
 
-int main(int argc, char** argv) {
-   
-    int ast;
 
+
+int main(int argc, char** argv) {
+
+    int ast;
+    
     puts("Quantos (*) quer colocar?");
-    scanf("%d", &ast);
-    
+    ast = lerInteiro();
     asteriscos(ast);
-    
+
     return (0);
 }
 
