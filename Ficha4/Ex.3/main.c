@@ -10,19 +10,19 @@
 #define EPD 1.16042
 #define DPE 0.86166
 
-void limparBufferEntrada(){ 
-    char ch; 
-    while ((ch = getchar()) != '\n' && ch != EOF); 
+void limparBufferEntrada() {
+    char ch;
+    while ((ch = getchar()) != '\n' && ch != EOF);
 }
 
-double lerDouble(){
+double lerDouble() {
     double montante;
     puts("Qual é o montante que quer converter?");
     scanf("%lf", &montante);
     return montante;
 }
 
-char lerChar(){
+char lerChar() {
     char op;
     puts("Para que moeda pretende converter (E-Euro, D-Dolar)");
     limparBufferEntrada();
@@ -31,12 +31,12 @@ char lerChar(){
     return op;
 }
 
-void resultado(double montante, char op){
-    if(op == 'D' || op == 'd'){
+void resultado(double montante, char op) {
+    if (op == 'D' || op == 'd') {
         printf("Valor final %.2lf $", montante * EPD);
     }
-    
-    if( op == 'E' || op == 'e'){
+
+    if (op == 'E' || op == 'e') {
         printf("Valor final %.2lf €", montante * DPE);
     }
 }
@@ -45,10 +45,10 @@ int main(int argc, char** argv) {
 
     double montante;
     char op;
-    
+
     montante = lerDouble();
     op = lerChar();
     resultado(montante, op);
-    
+
     return (0);
 }
