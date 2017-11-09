@@ -16,8 +16,7 @@ int main(int argc, char** argv) {
     
     for(i = 0; i <= ALUNOS; ++i ){
         nota = lerInteiro(minimo, maximo);
-        
-        
+
         contador += nota;
     }
  
