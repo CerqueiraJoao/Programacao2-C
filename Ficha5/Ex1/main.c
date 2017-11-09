@@ -12,10 +12,12 @@
 int main(int argc, char** argv) {
 
     int i, vetor[TAM_ARRAY];
+    
     for(i = 0; i < TAM_ARRAY; ++i){
         vetor[i] = i;
         printf("%d ", vetor[i]);
     }
+    
     return (0);
 }
 
