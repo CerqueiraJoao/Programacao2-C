@@ -20,6 +20,7 @@ int troca2(int *a){
 int main(int argc, char** argv) {
 
     int a =5;
+    printf("%d", a);
     troca2(&a);
     printf("\n%d", a);
     

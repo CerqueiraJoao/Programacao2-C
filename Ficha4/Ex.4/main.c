@@ -33,11 +33,10 @@ int main(int argc, char** argv) {
     puts("Quantas notas quer introduzir?");
     scanf("%d", &quantidade);
 
-
     notas = nota(quantidade);
+    
     media1 = media(notas, quantidade);
-
-
+    
     return (0);
 }
 
