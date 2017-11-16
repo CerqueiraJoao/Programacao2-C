@@ -44,13 +44,12 @@ int main(int argc, char** argv) {
         puts("Indique o numero");
         scanf("%d", &numero[i]);
     }
-    
-    do {
-    limparBufferEntrada();
-    puts("\nDeseja ver os pares (P) ou os impares (I)");
-    scanf("%c", &op);
 
-    
+    do {
+        limparBufferEntrada();
+        puts("\nDeseja ver os numeros pares (P) ou os numeros impares (I)");
+        scanf("%c", &op);
+
         if (op == 'P' || op == 'p') {
             par(numero);
         } else if (op == 'I' || op == 'i') {
@@ -58,8 +57,9 @@ int main(int argc, char** argv) {
         } else {
             puts("Opção Incorreta!!");
         }
+        
     } while (!(op == 'P' || op == 'p' || op == 'I' || op == 'i'));
-    
+
     return (0);
 }
 
