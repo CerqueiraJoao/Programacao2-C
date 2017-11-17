@@ -19,3 +19,4 @@ int lerString(char *string, int max) {
     }
     return 0;
 }
+
