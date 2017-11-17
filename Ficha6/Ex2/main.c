@@ -12,13 +12,14 @@
 
 int main(int argc, char** argv) {
 
-    char PrimeiroNome[MAX_STRING];
+    char primeiro_nome[MAX_STRING];
     
     puts("Qual é o seu primeiro nome?");
-    scanf("%s", PrimeiroNome);
     
-    lerString(PrimeiroNome, MAX_STRING);
-    printf("%s", PrimeiroNome[MAX_STRING]);
+    lerString(primeiro_nome, MAX_STRING);
+    
+    printf("Primeiro Nome: %s", primeiro_nome);    
+    
     
     return (0);
 }

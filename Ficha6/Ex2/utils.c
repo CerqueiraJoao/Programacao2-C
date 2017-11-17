@@ -12,7 +12,7 @@ int lerString(char *string, int max) {
         int tamanho = strlen(string) - 1;
         if (string[tamanho] == '\n') {
             string[tamanho] = '\0';
-        } else {
+        }else {
             clean_buffer();
         }
         return 1;
