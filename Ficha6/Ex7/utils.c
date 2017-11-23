@@ -20,20 +20,17 @@ int lerString(char *string, int max) {
     return 0;
 }
 
-char lerChar(char carater){
-    puts("Qual é o carater para verificar?");
-    scanf("%c", &carater);
-    return carater;
-}
-
-void countChar(char a[], char carater){
+void countChar(char a[], int tamanho) {
     int i, contar = 0;
-    
-    for (i = 0; i < MAX_STRING; ++i){
-        if (a[i] == carater){
+
+    for (i = 0; i < tamanho; ++i) {
+        if (a[i] == ' ') {
+            continue;
+        } else {
             ++contar;
         }
     }
-    printf("Inseriu a letra '%c' %d vezes!", carater, contar);
+    printf("O seu nome tem %d letras!", contar);
 }
+
 

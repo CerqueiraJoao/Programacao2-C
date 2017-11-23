@@ -8,11 +8,12 @@
 #ifndef UTILS_H
 #define UTILS_H
 
-#define MAX_STRING 15
+#define MAX_STRING 50
 
 void clean_buffer();
 int lerString(char *string, int max);
-char lerChar(char carater);
-void countChar(char a[], char carater);
+
+void countChar(char a[], int tamanho);
+
 #endif /* UTILS_H */
 
