@@ -9,7 +9,7 @@
 #define UTILS_H
 
 #define MAX_STRING 15
-#define VIRGULA ","
+#define VIRGULA ",\0"
 
 void clean_buffer();
 int lerString(char *string, int max);
