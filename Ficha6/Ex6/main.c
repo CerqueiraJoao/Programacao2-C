@@ -13,12 +13,12 @@
 
 int main(int argc, char** argv) {
     
-    char primeiro_nome[MAX_STRING], carater[1];
+    char primeiro_nome[MAX_STRING], carater;
     
     puts("Primeiro Nome ");
     lerString(primeiro_nome, MAX_STRING);
-
-    puts("Qual é o carater para verificar?");
-    lerChar();
+ 
+    carater = lerChar(carater);   
+    countChar(primeiro_nome, carater);
     return (0);
 }
