@@ -20,6 +20,14 @@ int lerString(char *string, int max) {
     return 0;
 }
 
-int lastIndex (){
-    
+int lastIndex(char espaco, char nome_completo[], int max) {
+    int i = 0, posicao = -1;
+
+    while (nome_completo[i] != '\0') {
+        if (nome_completo[i] == espaco) {
+            posicao = i;
+        }
+        ++i;
+    }
+    return posicao;
 }
