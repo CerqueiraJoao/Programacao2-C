@@ -2,16 +2,16 @@
  * File:   main.c
  * Author: joaod
  *
- * Created on 29 de Novembro de 2017, 12:05
+ * Created on 29 de Novembro de 2017, 18:17
  */
 
 #include <stdio.h>
 #include <stdlib.h>
-#define MAX_LINHAS 4
-#define MAX_COLUNAS 5
+#define MAX_LINHAS 2
+#define MAX_COLUNAS 2
 
 int main(int argc, char** argv) {
-    int i, j, verificar, contar, matriz[MAX_LINHAS][MAX_COLUNAS];
+    int i, j, matriz[MAX_LINHAS][MAX_COLUNAS];
 
     //ler
     for (i = 0; i < MAX_LINHAS; ++i) {
@@ -21,26 +21,23 @@ int main(int argc, char** argv) {
         }
     }
 
-    //escrever
+    //escrever Inicial
+    printf("\nMatriz Inicial");
     for (i = 0; i < MAX_LINHAS; ++i) {
         puts("");
         for (j = 0; j < MAX_COLUNAS; ++j) {
-            printf(" %d ", matriz[i][j]);
+            printf("%d ", matriz[i][j]);
         }
     }
 
-    puts("\nQual é o valor para verificar?");
-    scanf("%d", &verificar);
-
+    //escrever Final
+    printf("\n\nMatriz Final");
     for (i = 0; i < MAX_LINHAS; ++i) {
-        for (j = 0; j < MAX_COLUNAS; ++j) {
-            if (matriz[i][j] == verificar) {
-                ++contar;
-            }
+        puts("");
+        for (j = (MAX_COLUNAS - 1); j >= 0; --j) {
+            printf("%d ", matriz[j][i]);
         }
     }
-    printf("Existem %d numeros %d na matriz!", contar, verificar);
-    
+
     return (0);
 }
-

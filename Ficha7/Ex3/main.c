@@ -14,7 +14,7 @@ int main(int argc, char** argv) {
     int i, j;
     float matriz[MAX_LINHAS][MAX_COLUNAS];
 
-
+    //ler
     for (i = 0; i < MAX_LINHAS; ++i) {
         for (j = 0; j < MAX_COLUNAS; ++j) {
             if (j == 0) {
@@ -35,6 +35,7 @@ int main(int argc, char** argv) {
         matriz[i][3] = (matriz[i][1] + matriz[i][2]) / 2;
     }
 
+    //escrefer
     for (i = 0; i < MAX_LINHAS; ++i) {
         puts("");
         for (j = 0; j < MAX_COLUNAS; ++j) {

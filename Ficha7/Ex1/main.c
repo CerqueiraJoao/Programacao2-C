@@ -13,6 +13,7 @@
 int main(int argc, char** argv) {
     int i, j, x, y, matriz[MAX_LINHAS][MAX_COLUNAS], maior, menor;
 
+    //ler
     for (x = 0; x < MAX_LINHAS; ++x) {
         for (y = 0; y < MAX_COLUNAS; ++y) {
             printf("Introduza os valores [%d] [%d] na matriz ", x, y);
@@ -38,6 +39,7 @@ int main(int argc, char** argv) {
         }
     }
 
+    //escrever
     for (i = 0; i < MAX_LINHAS; ++i) {
         puts("");
         for (j = 0; j < MAX_COLUNAS; ++j) {
