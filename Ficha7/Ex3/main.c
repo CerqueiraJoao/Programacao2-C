@@ -11,7 +11,7 @@
 #define MAX_COLUNAS 3
 
 int main(int argc, char** argv) {
-    int i, j, soma = 0, matriz[MAX_LINHAS][MAX_COLUNAS];
+    int i, j, soma, matriz[MAX_LINHAS][MAX_COLUNAS];
 
     //ler
     for (i = 0; i < MAX_LINHAS; ++i) {
@@ -42,7 +42,6 @@ int main(int argc, char** argv) {
             }
         }
         printf("%.2f", (float) soma / 2);
-        //soma = 0;
     }
 
     return (0);

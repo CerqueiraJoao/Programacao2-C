@@ -18,7 +18,7 @@ int linhas_colunas() {
         if (valor > MAXIMO) {
             puts("Valor superior ao máximo");
         }
-        
+
     } while (!(valor <= MAXIMO));
 
     return valor;
@@ -58,26 +58,27 @@ int main(int argc, char** argv) {
     //verificação
     if (linhas_m1 != colunas_m2) {
         puts("Operação inpossivel de realizar");
-    }
 
-    puts("\nMatriz Final");
+    } else {
 
-    //matriz3
-    //ler
-    for (i = 0; i < linhas_m1; ++i) {
-        for (j = 0; j < colunas_m2; ++j) {
-            matriz3[i][j] = matriz1[i][j] * matriz2[j][i];
+        puts("\nMatriz Final");
+
+        //matriz3
+        //ler
+        for (i = 0; i < linhas_m1; ++i) {
+            for (j = 0; j < colunas_m2; ++j) {
+                matriz3[i][j] = matriz1[i][j] * matriz2[j][i];
+            }
+        }
+
+        //escrever
+        for (i = 0; i < linhas_m1; ++i) {
+            puts("");
+            for (j = 0; j < colunas_m2; ++j) {
+                printf("%d ", matriz3[j][i]);
+            }
         }
     }
-
-    //escrever
-    for (i = 0; i < linhas_m1; ++i) {
-        puts("");
-        for (j = 0; j < colunas_m2; ++j) {
-            printf("%d ", matriz3[j][i]);
-        }
-    }
-
     return (0);
 }
 
