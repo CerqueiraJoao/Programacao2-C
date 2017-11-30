@@ -8,39 +8,41 @@
 #include <stdio.h>
 #include <stdlib.h>
 #define MAX_LINHAS 4
-#define MAX_COLUNAS 4
+#define MAX_COLUNAS 3
 
 int main(int argc, char** argv) {
-    int i, j;
-    float matriz[MAX_LINHAS][MAX_COLUNAS];
+    int i, j, soma = 0, matriz[MAX_LINHAS][MAX_COLUNAS];
 
     //ler
     for (i = 0; i < MAX_LINHAS; ++i) {
         for (j = 0; j < MAX_COLUNAS; ++j) {
             if (j == 0) {
                 printf("Codigo: ");
-                scanf("%f", &matriz[i][j]);
+                scanf("%d", &matriz[i][j]);
             } else if (j == 1) {
                 printf("Teste 1 ");
-                scanf("%f", &matriz[i][j]);
+                scanf("%d", &matriz[i][j]);
             } else if (j == 2) {
                 printf("Teste 2 ");
-                scanf("%f", &matriz[i][j]);
+                scanf("%d", &matriz[i][j]);
             }
         }
     }
 
     puts("Codigo  Teste 1  Teste 2  Media");
-    for (i = 0; i < MAX_LINHAS; ++i) {
-        matriz[i][3] = (matriz[i][1] + matriz[i][2]) / 2;
-    }
 
-    //escrefer
+    //escrever
     for (i = 0; i < MAX_LINHAS; ++i) {
+        soma = 0;
         puts("");
         for (j = 0; j < MAX_COLUNAS; ++j) {
-            printf("   %.0f    ", matriz[i][j]);
+            printf("   %.d    ", matriz[i][j]);
+            if (j > 0) {
+                soma += matriz[i][j];
+            }
         }
+        printf("%.2f", (float) soma / 2);
+        //soma = 0;
     }
 
     return (0);
