@@ -162,7 +162,6 @@ void jogar(int matriz[][MAX_MATRIZ], char token[MAX_TOKEN]) {
             break;
         }
 
-
         if (c >= 0 && c < MAX_MATRIZ) {
             if (linha >= 0 && linha < MAX_MATRIZ) {
                 if (matriz[linha][c] == IGUAL) {
@@ -179,17 +178,6 @@ void jogar(int matriz[][MAX_MATRIZ], char token[MAX_TOKEN]) {
             printf("Posição Inválida!! Insira novamente!\n");
             --i;
         }
-
-
-/*
-        if (matriz[linha][c] == IGUAL) {
-
-        } else {
-            printf("Posição Ocupada!! Insira novamente!\n");
-            --i;
-        }
-*/
-
 
         escrever_matriz(matriz);
 
