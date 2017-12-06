@@ -8,9 +8,9 @@
 #ifndef UTILS_H
 #define UTILS_H
 
-#define MAX_MATRIZ 9
-#define MAX_TOKEN 2
-#define IGUAL '='
+#define MAX_MATRIZ 9 //Tamanho da matriz 9x9
+#define MAX_TOKEN 2 //Tamanho tokens
+#define IGUAL '=' //Constante na matriz
 
 void clean_buffer();
 void escolher_token(char token[]);

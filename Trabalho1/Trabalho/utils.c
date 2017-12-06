@@ -7,7 +7,7 @@ void clean_buffer() {
     while ((ch = getchar()) != '\n' && ch != EOF);
 }
 
-void escolher_token(char token[]) {
+void escolher_token(char token[]) { //Funçao que permite escolher o token
     int i;
 
     for (i = 0; i < MAX_TOKEN; ++i) {
@@ -24,7 +24,8 @@ void escolher_token(char token[]) {
     }
 }
 
-void matriz_igual(int matriz[][MAX_MATRIZ]) {
+//Funçao que imprime a matriz toda com '='
+void matriz_igual(int matriz[][MAX_MATRIZ]) { 
     int i, j;
 
     for (i = 0; i < MAX_MATRIZ; ++i) {
@@ -34,6 +35,7 @@ void matriz_igual(int matriz[][MAX_MATRIZ]) {
     }
 }
 
+//Funçao que imprime a matriz toda com o token de cada jogador na posição escolhida
 void matriz_tokens(int matriz[][MAX_MATRIZ], int coluna, int linha, char token[], int jogador) {
     int i, j;
 
@@ -49,7 +51,8 @@ void matriz_tokens(int matriz[][MAX_MATRIZ], int coluna, int linha, char token[]
     }
 }
 
-void escrever_matriz(int matriz[][MAX_MATRIZ]) {
+//Função que escreve a matriz
+void escrever_matriz(int matriz[][MAX_MATRIZ]) { 
     int i, j, letras = 65;
 
     puts("");
@@ -76,6 +79,7 @@ void escrever_matriz(int matriz[][MAX_MATRIZ]) {
 
 }
 
+//Função que verifica as jogadas
 int confirmar_jogadas(int matriz[][MAX_MATRIZ], int n_jogadas_1, int n_jogadas_2, int jogador) {
     int i, j;
 
@@ -142,6 +146,7 @@ int confirmar_jogadas(int matriz[][MAX_MATRIZ], int n_jogadas_1, int n_jogadas_2
     return 0;
 }
 
+//Função que permite escolher as posiçoes, desistir, contar jogadas, etc...
 void jogar(int matriz[][MAX_MATRIZ], char token[MAX_TOKEN]) {
     int linha, coluna = 0, c = 0, n_jogadas_1 = 0, n_jogadas_2 = 0, i, j, letras = 65, vit = 0;
 
