@@ -34,16 +34,16 @@ void matriz_igual(int matriz[][MAX_MATRIZ]) {
     }
 }
 
-void matriz_tokens(int matriz[][MAX_MATRIZ], int c, int linha, char token[], int jogador) {
+void matriz_tokens(int matriz[][MAX_MATRIZ], int coluna, int linha, char token[], int jogador) {
     int i, j;
 
     for (i = -1; i < MAX_MATRIZ; ++i) {
         for (j = -1; j < MAX_MATRIZ; ++j) {
 
             if (jogador == 0) {
-                matriz[linha][c] = token[0];
+                matriz[linha][coluna] = token[0];
             } else if (jogador == 1) {
-                matriz[linha][c] = token[1];
+                matriz[linha][coluna] = token[1];
             }
         }
     }
