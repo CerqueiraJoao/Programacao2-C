@@ -1,0 +1,24 @@
+/* 
+ * File:   utils.h
+ * Author: joaod
+ *
+ * Created on 5 de Dezembro de 2017, 15:12
+ */
+
+#ifndef UTILS_H
+#define UTILS_H
+
+#define MAX_MATRIZ 9
+#define MAX_TOKEN 2
+#define IGUAL '='
+
+void clean_buffer();
+void jogar(int matriz[][MAX_MATRIZ], char token[MAX_TOKEN]);
+void escrever_matriz(int matriz[][MAX_MATRIZ]);
+void matriz_igual(int matriz[][MAX_MATRIZ]);
+void escolher_token(char token[]);
+void matriz_tokens(int matriz[][MAX_MATRIZ], int c, int linha, char token[], int jogador);
+int confirmar_jogada(int matriz[][MAX_MATRIZ], int n_jogadas_1, int n_jogadas_2, int jogador);
+
+#endif /* UTILS_H */
+
