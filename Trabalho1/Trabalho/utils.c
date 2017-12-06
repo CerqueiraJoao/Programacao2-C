@@ -7,23 +7,6 @@ void clean_buffer() {
     while ((ch = getchar()) != '\n' && ch != EOF);
 }
 
-void matriz_tokens(int matriz[][MAX_MATRIZ], int c, int linha, char token[], int jogador) {
-    int i, j;
-
-    for (i = -1; i < MAX_MATRIZ; ++i) {
-        for (j = -1; j < MAX_MATRIZ; ++j) {
-
-            if (jogador == 0) {
-                matriz[linha][c] = token[0];
-            } else if (jogador == 1) {
-                matriz[linha][c] = token[1];
-            }
-        }
-    }
-}
-
-
-
 void escolher_token(char token[]) {
     int i;
 
@@ -47,6 +30,21 @@ void matriz_igual(int matriz[][MAX_MATRIZ]) {
     for (i = 0; i < MAX_MATRIZ; ++i) {
         for (j = 0; j < MAX_MATRIZ; ++j) {
             matriz[i][j] = IGUAL;
+        }
+    }
+}
+
+void matriz_tokens(int matriz[][MAX_MATRIZ], int c, int linha, char token[], int jogador) {
+    int i, j;
+
+    for (i = -1; i < MAX_MATRIZ; ++i) {
+        for (j = -1; j < MAX_MATRIZ; ++j) {
+
+            if (jogador == 0) {
+                matriz[linha][c] = token[0];
+            } else if (jogador == 1) {
+                matriz[linha][c] = token[1];
+            }
         }
     }
 }
@@ -78,7 +76,7 @@ void escrever_matriz(int matriz[][MAX_MATRIZ]) {
 
 }
 
-int confirmar_jogada(int matriz[][MAX_MATRIZ], int n_jogadas_1, int n_jogadas_2, int jogador) {
+int confirmar_jogadas(int matriz[][MAX_MATRIZ], int n_jogadas_1, int n_jogadas_2, int jogador) {
     int i, j;
 
     //na horizontal
@@ -163,7 +161,7 @@ void jogar(int matriz[][MAX_MATRIZ], char token[MAX_TOKEN]) {
             printf("\nO jogador %d desistiu, FRACO!!\n", i + 1);
             break;
         }
-        
+
         if (c < MAX_MATRIZ && c >= 0) {
             if (linha >= 0 && linha < MAX_MATRIZ) {
                 matriz_tokens(matriz, c, linha, token, i);
@@ -186,7 +184,7 @@ void jogar(int matriz[][MAX_MATRIZ], char token[MAX_TOKEN]) {
             ++n_jogadas_2;
         }
 
-        vit = confirmar_jogada(matriz, n_jogadas_1, n_jogadas_2, i);
+        vit = confirmar_jogadas(matriz, n_jogadas_1, n_jogadas_2, i);
 
         if (vit == 1) {
             break;

@@ -15,7 +15,6 @@ int main(int argc, char** argv) {
     int matriz[MAX_MATRIZ][MAX_MATRIZ];
     char token[MAX_TOKEN];
 
-
     escolher_token(token);
     matriz_igual(matriz);
     escrever_matriz(matriz);

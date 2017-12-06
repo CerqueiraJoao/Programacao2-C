@@ -13,12 +13,12 @@
 #define IGUAL '='
 
 void clean_buffer();
-void jogar(int matriz[][MAX_MATRIZ], char token[MAX_TOKEN]);
-void escrever_matriz(int matriz[][MAX_MATRIZ]);
-void matriz_igual(int matriz[][MAX_MATRIZ]);
 void escolher_token(char token[]);
+void matriz_igual(int matriz[][MAX_MATRIZ]);
+void escrever_matriz(int matriz[][MAX_MATRIZ]);
+void jogar(int matriz[][MAX_MATRIZ], char token[MAX_TOKEN]);
 void matriz_tokens(int matriz[][MAX_MATRIZ], int c, int linha, char token[], int jogador);
-int confirmar_jogada(int matriz[][MAX_MATRIZ], int n_jogadas_1, int n_jogadas_2, int jogador);
+int confirmar_jogadas(int matriz[][MAX_MATRIZ], int n_jogadas_1, int n_jogadas_2, int jogador);
 
 #endif /* UTILS_H */
 
