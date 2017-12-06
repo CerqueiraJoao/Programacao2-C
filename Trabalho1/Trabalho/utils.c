@@ -25,7 +25,8 @@ void escolher_token(char token[]) { //Funçao que permite escolher o token
 }
 
 //Funçao que imprime a matriz toda com '='
-void matriz_igual(int matriz[][MAX_MATRIZ]) { 
+
+void matriz_igual(int matriz[][MAX_MATRIZ]) {
     int i, j;
 
     for (i = 0; i < MAX_MATRIZ; ++i) {
@@ -36,6 +37,7 @@ void matriz_igual(int matriz[][MAX_MATRIZ]) {
 }
 
 //Funçao que imprime a matriz toda com o token de cada jogador na posição escolhida
+
 void matriz_tokens(int matriz[][MAX_MATRIZ], int coluna, int linha, char token[], int jogador) {
     int i, j;
 
@@ -52,7 +54,8 @@ void matriz_tokens(int matriz[][MAX_MATRIZ], int coluna, int linha, char token[]
 }
 
 //Função que escreve a matriz
-void escrever_matriz(int matriz[][MAX_MATRIZ]) { 
+
+void escrever_matriz(int matriz[][MAX_MATRIZ]) {
     int i, j, letras = 65;
 
     puts("");
@@ -80,6 +83,7 @@ void escrever_matriz(int matriz[][MAX_MATRIZ]) {
 }
 
 //Função que verifica as jogadas
+
 int confirmar_jogadas(int matriz[][MAX_MATRIZ], int n_jogadas_1, int n_jogadas_2, int jogador) {
     int i, j;
 
@@ -88,10 +92,10 @@ int confirmar_jogadas(int matriz[][MAX_MATRIZ], int n_jogadas_1, int n_jogadas_2
         for (j = 0; j < MAX_MATRIZ - 2; j++) {
             if (matriz[i][j] != '=' && matriz[i][j] == matriz[i][j + 1] && matriz[i][j] == matriz[i][j + 2]) {
                 if (jogador == 0) {
-                    printf("\nGanhou o jogador 1 com %d jogadas!!\n", n_jogadas_1);
+                    printf("\nGanhou o jogador %d com %d jogadas!!\n", jogador + 1, n_jogadas_1);
                     return 1;
                 } else if (jogador == 1) {
-                    printf("\nGanhou o jogador 2 com %d jogadas!!\n", n_jogadas_2);
+                    printf("\nGanhou o jogador %d com %d jogadas!!\n", jogador + 1, n_jogadas_2);
                     return 1;
                 }
             }
@@ -103,10 +107,10 @@ int confirmar_jogadas(int matriz[][MAX_MATRIZ], int n_jogadas_1, int n_jogadas_2
         for (j = 0; j < MAX_MATRIZ; j++) {
             if (matriz[i][j] != '=' && matriz[i][j] == matriz[i + 1][j] && matriz[i][j] == matriz[i + 2][j]) {
                 if (jogador == 0) {
-                    printf("\nGanhou o jogador 1 com %d jogadas!!\n", n_jogadas_1);
+                    printf("\nGanhou o jogador %d com %d jogadas!!\n", jogador + 1, n_jogadas_1);
                     return 1;
                 } else if (jogador == 1) {
-                    printf("\nGanhou o jogador 2 com %d jogadas!!\n", n_jogadas_2);
+                    printf("\nGanhou o jogador %d com %d jogadas!!\n", jogador + 1, n_jogadas_2);
                     return 1;
                 }
             }
@@ -118,10 +122,10 @@ int confirmar_jogadas(int matriz[][MAX_MATRIZ], int n_jogadas_1, int n_jogadas_2
         for (j = 0; j < MAX_MATRIZ - 2; j++) {
             if (matriz[i][j] != '=' && matriz[i][j] == matriz[i + 1][j + 1] && matriz[i][j] == matriz[i + 2][j + 2]) {
                 if (jogador == 0) {
-                    printf("\nGanhou o jogador 1 com %d jogadas!!\n", n_jogadas_1);
+                    printf("\nGanhou o jogador %d com %d jogadas!!\n", jogador + 1, n_jogadas_1);
                     return 1;
                 } else if (jogador == 1) {
-                    printf("\nGanhou o jogador 2 com %d jogadas!!\n", n_jogadas_2);
+                    printf("\nGanhou o jogador %d com %d jogadas!!\n", jogador + 1, n_jogadas_2);
                     return 1;
                 }
             }
@@ -133,10 +137,10 @@ int confirmar_jogadas(int matriz[][MAX_MATRIZ], int n_jogadas_1, int n_jogadas_2
         for (j = 0; j < MAX_MATRIZ - 2; j++) {
             if (matriz[i][j + 2] != '=' && matriz[i][j + 2] == matriz[i + 1][j + 1] && matriz[i][j + 2] == matriz[i + 2][j]) {
                 if (jogador == 0) {
-                    printf("\nGanhou o jogador 1 com %d jogadas!!\n", n_jogadas_1);
+                    printf("\nGanhou o jogador %d com %d jogadas!!\n", jogador + 1, n_jogadas_1);
                     return 1;
                 } else if (jogador == 1) {
-                    printf("\nGanhou o jogador 2 com %d jogadas!!\n", n_jogadas_2);
+                    printf("\nGanhou o jogador %d com %d jogadas!!\n", jogador + 1, n_jogadas_2);
                     return 1;
                 }
             }
@@ -147,6 +151,7 @@ int confirmar_jogadas(int matriz[][MAX_MATRIZ], int n_jogadas_1, int n_jogadas_2
 }
 
 //Função que permite escolher as posiçoes, desistir, contar jogadas, etc...
+
 void jogar(int matriz[][MAX_MATRIZ], char token[MAX_TOKEN]) {
     int linha, coluna = 0, c = 0, n_jogadas_1 = 0, n_jogadas_2 = 0, i, j, letras = 65, vit = 0;
 
