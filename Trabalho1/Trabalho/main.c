@@ -15,7 +15,7 @@ int main(int argc, char** argv) {
     char token[MAX_TOKEN]; //Tokens
 
     escolher_token(token); //Funçao que permite escolher o token
-    matriz_igual(matriz); //Funçao que imprime a matriz toda com '='
+    matriz_inicial(matriz); //Funçao que imprime a matriz toda com '='
     escrever_matriz(matriz); //Função que escreve a matriz
     jogar(matriz, token); //Função que permite escolher as posiçoes
 
