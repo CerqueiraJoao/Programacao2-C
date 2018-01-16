@@ -46,7 +46,7 @@ void escolher_token(char token[]) { //Funçao que permite escolher o token
     }
 }
 
-//Funçao que imprime a matriz toda com '='
+//Funçao que imprime a matriz toda com '-'
 
 void matriz_inicial(int matriz[][MAX_MATRIZ]) {
     int i, j;
@@ -160,6 +160,7 @@ void jogar(int matriz[][MAX_MATRIZ], char token[MAX_TOKEN]) {
     while (1) {
         printf("\nJogador %d \n", i + 1);
         printf("Pode desistir a qualquer momento inserindo a coluna Z linha 0!!");
+        
         if (i == 0) {
             printf("\nIntroduza a Coluna %s (Letras Maisculas)", jogador1);
         } else if (i == 1) {
@@ -168,6 +169,7 @@ void jogar(int matriz[][MAX_MATRIZ], char token[MAX_TOKEN]) {
         scanf("%c", &coluna);
         clean_buffer();
         c = (coluna - 65);
+        
         if (i == 0) {
             printf("\nIntroduza a Linha %s ", jogador1);
         } else if (i == 1) {
@@ -176,6 +178,7 @@ void jogar(int matriz[][MAX_MATRIZ], char token[MAX_TOKEN]) {
         scanf("%d", &linha);
         linha = linha - 1;
         clean_buffer();
+        
         if (c == 25 && linha == -1) {
             if (i == 0) {
                 printf("\nO %s desistiu, FRACO!!\n", jogador1);
@@ -184,6 +187,7 @@ void jogar(int matriz[][MAX_MATRIZ], char token[MAX_TOKEN]) {
             }
             break;
         }
+        
         if (c >= 0 && c < MAX_MATRIZ) {
             if (linha >= 0 && linha < MAX_MATRIZ) {
                 if (matriz[linha][c] == VALOR_INICIAL) {
@@ -200,16 +204,21 @@ void jogar(int matriz[][MAX_MATRIZ], char token[MAX_TOKEN]) {
             printf("Posição Inválida!! Insira novamente!\n");
             --i;
         }
+        
         escrever_matriz(matriz);
+       
         if (i == 0) {
             ++n_jogadas_1;
         } else if (i == 1) {
             ++n_jogadas_2;
         }
+        
         vit = confirmar_jogadas(matriz, n_jogadas_1, n_jogadas_2, i);
+       
         if (vit == 1) {
             break;
         }
+        
         if (i == 1) {
             i = -1;
         }
